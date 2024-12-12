@@ -45,7 +45,7 @@ func GetDataUserFromApi(respw http.ResponseWriter, req *http.Request) {
 }
 
 func GetDataUser(respw http.ResponseWriter, req *http.Request) {
-	payload, err := watoken.Decode(config.PublicKeyWhatsAuth, at.GetLoginFromHeader(req))
+	payload, err := watoken.Decode("q9X@4T&zF!mP#7G*W$kY^8Nv2dB%6Jh3LxV@pT9$R^wQ!8X#m&kL7qZ*5F", at.GetLoginFromHeader(req))
 	if err != nil {
 		var respn model.Response
 		respn.Status = "Error : Token Tidak Valid "
